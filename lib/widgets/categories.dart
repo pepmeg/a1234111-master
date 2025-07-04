@@ -99,6 +99,7 @@ class Categories extends StatelessWidget {
                           fontSize: 10,
                           fontWeight: FontWeight.w600,
                           color: category.color,
+                          fontFamily: 'poppins_medium'
                         ),
                       ),
                     ),

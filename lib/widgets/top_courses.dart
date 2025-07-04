@@ -32,6 +32,7 @@ class top_courses extends StatelessWidget {
             style: TextStyle(
               fontSize: 16,
               color: Colors.grey,
+                fontFamily: 'poppins_medium'
             ),
           ),
         ),
@@ -86,6 +87,7 @@ class top_courses extends StatelessWidget {
                                       fontSize: 14,
                                       fontWeight: FontWeight.w600,
                                       color: Colors.black87,
+                                        fontFamily: 'poppins_medium'
                                     ),
                                   ),
                                   const SizedBox(height: 2),
@@ -95,6 +97,7 @@ class top_courses extends StatelessWidget {
                                       fontSize: 10,
                                       fontWeight: FontWeight.w400,
                                       color: Colors.grey,
+                                        fontFamily: 'poppins_regular'
                                     ),
                                   ),
                                 ],

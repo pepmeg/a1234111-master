@@ -19,7 +19,6 @@ final List<Product> products = [
 ];
 
 class Recomended extends StatelessWidget {
-  const Recomended({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +32,7 @@ class Recomended extends StatelessWidget {
             style: TextStyle(
               fontSize: 16,
               color: Colors.grey,
+              fontFamily: 'poppins_medium'
             ),
           ),
         ),
@@ -87,6 +87,7 @@ class Recomended extends StatelessWidget {
                                       fontSize: 14,
                                       fontWeight: FontWeight.w600,
                                       color: Colors.black87,
+                                        fontFamily: 'poppins_medium'
                                     ),
                                   ),
                                   const SizedBox(height: 2),
@@ -96,6 +97,7 @@ class Recomended extends StatelessWidget {
                                       fontSize: 10,
                                       fontWeight: FontWeight.w400,
                                       color: Colors.grey,
+                                        fontFamily: 'poppins_regular'
                                     ),
                                   ),
                                 ],
