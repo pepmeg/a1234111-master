@@ -1,3 +1,4 @@
+import 'package:a1234111/pages/learning.dart';
 import 'package:a1234111/pages/main_activity.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,7 @@ final List<PageItem> pages = [
   ),
   PageItem(
     imageAssetPath: 'images/ic_exam.png',
-    pageWidget: MainActivity(),
+    pageWidget: Learning(),
     iconText: 'Exams',
   ),
   PageItem(
@@ -49,7 +50,7 @@ class BottomBar extends StatelessWidget {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
-        color: Colors.grey[200],
+        color: Color(0xFFF5F7FB),
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
