@@ -41,7 +41,6 @@ final List<Category> categories = [
 ];
 
 class Categories extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Padding(

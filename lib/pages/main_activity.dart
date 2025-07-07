@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/BottomBar.dart';
 import '../widgets/recomended.dart';
 import '../widgets/categories.dart';
 import '../widgets/top_courses.dart';
@@ -60,7 +61,7 @@ class _MainActivityState extends State<MainActivity> {
               ],
             ),
           ),
-//          const BottomBar()
+          BottomBar()
         ],
       ),
     );
