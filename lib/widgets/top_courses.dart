@@ -38,8 +38,9 @@ class top_courses extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         SizedBox(
-          height: 170,
+          height: 160,
           child: ListView.separated(
+            clipBehavior: Clip.none,
             scrollDirection: Axis.horizontal,
             itemCount: products.length,
             separatorBuilder: (context, _) => const SizedBox(width: 12),

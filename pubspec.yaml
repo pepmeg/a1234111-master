@@ -71,7 +71,7 @@ flutter:
     - images/ic_search.png
     - images/ic_account.png
     - images/plashka.png
-    - imagers/ic_trash.png
+    - images/ic_trash.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

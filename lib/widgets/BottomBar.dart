@@ -42,22 +42,35 @@ final List<PageItem> pages = [
   ),
 ];
 
-class BottomBar extends StatelessWidget {
+class BottomBar extends StatefulWidget {
   const BottomBar({Key? key}) : super(key: key);
+
+  @override
+  _BottomBarState createState() => _BottomBarState();
+}
+
+class _BottomBarState extends State<BottomBar> {
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
-        color: Color(0xFFF5F7FB),
+        color: const Color(0xFFF5F7FB),
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: List.generate(pages.length, (index) {
             final page = pages[index];
+            final bool isSelected = index == selectedIndex;
+
             return GestureDetector(
               onTap: () {
+                setState(() {
+                  selectedIndex = index;
+                });
+
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (_) => page.pageWidget),
@@ -69,31 +82,36 @@ class BottomBar extends StatelessWidget {
                   Stack(
                     clipBehavior: Clip.none,
                     children: [
+                      if (isSelected)
+                        Positioned(
+                          top: -13,
+                          left: -5,
+                          child: Image.asset(
+                            'images/plashka.png',
+                            width: 33,
+                            height: 7,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
                       Image.asset(
                         page.imageAssetPath,
                         width: 24,
                         height: 24,
                         fit: BoxFit.contain,
-                        color: const Color(0xFF666666),
-                      ),
-                      Positioned(
-                        top: -13,
-                        left: -5,
-                        child: Image.asset(
-                          'images/plashka.png',
-                          width: 33,
-                          height: 7,
-                          fit: BoxFit.contain,
-                        ),
+                        color: isSelected
+                            ? const Color(0xFF7B61FF)
+                            : const Color(0xFF666666),
                       ),
                     ],
                   ),
                   const SizedBox(height: 4),
                   Text(
                     page.iconText,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 12,
-                      color: Color(0xFF666666)
+                      color: isSelected
+                          ? const Color(0xFF7B61FF)
+                          : const Color(0xFF666666),
                     ),
                   ),
                 ],
