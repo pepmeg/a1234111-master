@@ -52,7 +52,7 @@ class _LearningState extends State<Learning> {
                     children: List.generate(filters.length, (index) {
                       return Padding(
                         padding: EdgeInsets.only(
-                            right: index < filters.length - 1 ? 11.0 : 0),
+                            right:  11),
                         child: GestureDetector(
                           onTap: () {
                             setState(() {
